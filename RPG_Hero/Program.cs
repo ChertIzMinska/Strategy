@@ -17,7 +17,7 @@ namespace RPG_Hero
         {
             Hero hero = new Hero();
             int x = 0;
-            Console.WriteLine(" ");
+            Console.WriteLine("Выберите действие:\n1.Выберите класс вашего героя \n2.Выберите расу вашего класса\n3.Выберите пол\n4.Введите имя\n5.Выйти\n");
             while (x != 5)
             {
                 try
@@ -31,12 +31,15 @@ namespace RPG_Hero
                 switch (x)
                 {
                     case 1:
+                        Console.WriteLine("Выберите класс:\n1.Воин \n2.Лучник\n3.Друил\n4.Некромант\n5.Маг\n");
                         hero.Set_param(new ChooseClass());
                         break;
                     case 2:
+                        Console.WriteLine("Выберите расу:\n1.Кентавр \n2.Человек\n3.Эльф\n4.Хоббит\n5.Орк\n6.Гном\n");
                         hero.Set_param(new ChooseRace());
                         break;
                     case 3:
+                        Console.WriteLine("Выберите пол:\n1.Мужчина \n2.Женщина\n");
                         hero.Set_param(new ChooseGender());
                         break;
                     case 4:
@@ -47,7 +50,8 @@ namespace RPG_Hero
                 }
             }
             x = 0;
-            while(x!=5)
+            Console.WriteLine("Выберите действие:\n1.Взять одноручный мед \n2.Взять двуручный меч\n3.Взять топор\n4.Взять копье\n5.Взять лук\n6.Выйти\n");
+            while (x!=6)
             {
                 try
                 {
