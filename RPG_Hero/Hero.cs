@@ -18,6 +18,10 @@ namespace RPG_Hero
         ARacesHeroes race;
         Gender gender;
         string Name;
+        public string get_info()
+        {
+            return "Имя:" + Name + "Пол:"+gender+ "Раса:" +race+ "Класс:"+clas;
+        }
         public void set_name(string name)
         {
             Name = name;
@@ -39,7 +43,7 @@ namespace RPG_Hero
                 race = (ARacesHeroes)chooseCharactercs.choose_something();
             else if (chooseCharactercs is ChooseGender)
                 gender = (Gender)chooseCharactercs.choose_something();
-            else if (chooseCharactercs is ChooseGender)
+            else if (chooseCharactercs is ChooseClass)
                 clas = (AClassesHeroes)chooseCharactercs.choose_something();
         }
         
